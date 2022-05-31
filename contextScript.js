@@ -1,3 +1,5 @@
+"use strict";
+
 const intensity = (async function () {
   return (await chrome.storage.local.get(["targetIntensity"])).targetIntensity;
 })();
@@ -28,6 +30,4 @@ function transform() {
 
   createHTMLElement("span", selectedText, html);
 }
-
-export default transform;
 // transform();

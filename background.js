@@ -1,7 +1,5 @@
 "use strict";
 
-import transform from "./contextScript.js";
-
 let defaultIntensity = 10;
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -9,17 +7,17 @@ chrome.runtime.onInstalled.addListener(() => {
   console.log(`Default target language: ${defaultIntensity}`);
 });
 
-chrome.runtime.onInstalled.addListener(async () => {
-  chrome.contextMenus.create({
-    id: "slctm",
-    contexts: ["selection"],
-    title: "Zalgoify selection",
-  });
-});
+// chrome.runtime.onInstalled.addListener(async () => {
+//   chrome.contextMenus.create({
+//     id: "slctm",
+//     contexts: ["selection"],
+//     title: "Zalgoify selection",
+//   });
+// });
 
-chrome.contextMenus.onClicked.addListener((_, tab) => {
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    func: transform,
-  });
-});
+// chrome.contextMenus.onClicked.addListener((_, tab) => {
+//   chrome.scripting.executeScript({
+//     target: { tabId: tab.id },
+//     files: ["contextScript.js"],
+//   });
+// });
