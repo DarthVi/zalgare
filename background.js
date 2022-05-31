@@ -4,7 +4,7 @@ let defaultIntensity = 10;
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.set({ targetIntensity: defaultIntensity });
-  console.log(`Default target language: ${defaultIntensity}`);
+  console.log(`Default target intensity: ${defaultIntensity}`);
 });
 
 // chrome.runtime.onInstalled.addListener(async () => {

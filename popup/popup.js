@@ -5,14 +5,21 @@ const zalgoedText = document.querySelector("#zalgoedText");
 const changeBtn = document.querySelector("#change");
 const sliderRange = document.querySelector("#mySlider");
 
+chrome.storage.local
+  .get(["targetIntensity"])
+  .then(resp => resp.targetIntensity)
+  .then(value => {
+    console.log(value);
+
+    sliderRange.value = value;
+  });
+
 async function zalgo() {
   const intensity = (await chrome.storage.local.get(["targetIntensity"]))
     .targetIntensity;
 
-  console.log(intensity);
   const oldText = normalText.value;
   const newText = ZalgoModule.zalgoify(oldText, intensity);
-  console.log(newText);
 
   zalgoedText.innerHTML = newText;
 }
