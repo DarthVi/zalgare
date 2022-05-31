@@ -37,7 +37,6 @@ const ZalgoModule = (function () {
       for (let i = 0; i < intensity; i++) {
         const zalgoOut = zalgoGen.next().value;
         c += zalgoOut;
-        console.log(c);
       }
       return c;
     });
