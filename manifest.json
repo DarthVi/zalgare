@@ -1,0 +1,37 @@
+{
+  "name": "Zalgare",
+  "version": "1.0",
+  "description": "Transform normal text into Zalgo text",
+  "permissions": ["activeTab", "storage", "scripting", "contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "img/glider_16.png",
+      "32": "img/glider_32.png",
+      "128": "img/glider_128.png"
+    }
+  },
+  "icons": {
+    "16": "img/glider_16.png",
+    "32": "img/glider_32.png",
+    "128": "img/glider_128.png"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      }
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["zalgoFunc.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "manifest_version": 3
+}

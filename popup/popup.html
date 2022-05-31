@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <textarea id="normalText" name="normalText" rows="4" cols="50"> </textarea>
+    <div class="slidecontainer">
+      <label for="mySlider">Choose intensity:</label>
+      <input
+        type="range"
+        min="1"
+        max="30"
+        value="10"
+        class="slider"
+        id="mySlider"
+      />
+    </div>
+    <div>
+      <button id="change">re-generate</button>
+    </div>
+    <div id="zalgoedText"></div>
+
+    <script type="text/javascript" src="../zalgoFunc.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>
