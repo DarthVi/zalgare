@@ -2,7 +2,7 @@
   "name": "Zalgare",
   "version": "1.0",
   "description": "Transform normal text into Zalgo text",
-  "permissions": ["activeTab", "storage", "scripting", "contextMenus"],
+  "permissions": ["activeTab", "storage"],
   "background": {
     "service_worker": "background.js"
   },
