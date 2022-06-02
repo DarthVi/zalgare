@@ -3,6 +3,7 @@
 const normalText = document.querySelector("#normalText");
 const zalgoedText = document.querySelector("#zalgoedText");
 const changeBtn = document.querySelector("#change");
+const copyBtn = document.querySelector("#copy");
 const sliderRange = document.querySelector("#mySlider");
 
 chrome.storage.local
@@ -32,3 +33,7 @@ sliderRange.addEventListener("change", () => {
 // normalText.addEventListener("onkeyup", zalgo);
 // changeBtn.addEventListener("onclick", zalgo);
 normalText.onkeyup = changeBtn.onclick = zalgo;
+
+copyBtn.addEventListener("click", async () => {
+  await navigator.clipboard.writeText(zalgoedText.textContent);
+});
